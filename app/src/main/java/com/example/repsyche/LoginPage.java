@@ -24,7 +24,7 @@ public class LoginPage extends AppCompatActivity {
         setContentView(R.layout.activity_login_page);
         mUserDatabaseHelper = new UserDatabaseHelper(this);
         email = findViewById(R.id.SignIn_email);
-        password = findViewById(R.id.SignIn_password);
+        password = findViewById(R.id.SignUp_password);
     }
 
     public void SignIn_onclick_homepageconnect(View v) {

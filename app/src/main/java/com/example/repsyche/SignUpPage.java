@@ -3,12 +3,12 @@ package com.example.repsyche;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.widget.EditText;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.EditText;
 
 public class SignUpPage extends AppCompatActivity {
 
@@ -30,9 +30,10 @@ public class SignUpPage extends AppCompatActivity {
         firstname = (EditText) findViewById(R.id.FirstName);
         lasttname = (EditText) findViewById(R.id.LastName);
         username = (EditText) findViewById(R.id.SignUp_Username);
-        email = (EditText) findViewById(R.id.TextInputLayout);
-        password = (EditText) findViewById(R.id.SignIn_password);
+        email = (EditText) findViewById(R.id.SignUp_email);
+        password = (EditText) findViewById(R.id.SignUp_password);
         confirm_password = (EditText) findViewById(R.id.SignUp_ConfirmPassword);
+
     }
 
     public void signinconnect(View v) {
@@ -46,6 +47,7 @@ public class SignUpPage extends AppCompatActivity {
         startActivity(n);
 
     }
+
 
     public void signUp_onclick(View view){
         String fname_content = firstname.getText().toString();
@@ -120,3 +122,4 @@ public class SignUpPage extends AppCompatActivity {
     }
 
 }
+

@@ -26,7 +26,7 @@
         app:srcCompat="@drawable/signupback" />
 
     <LinearLayout
-        android:id="@+id/LinearLayout_Details"
+        android:id="@+id/linearLayout"
         android:layout_width="286dp"
         android:layout_height="345dp"
         android:gravity="center"
@@ -61,7 +61,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/TextInputLayout"
+            android:id="@+id/SignUp_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -69,11 +69,11 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/SignIn_password"
+            android:id="@+id/SignUp_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/password"
+            android:hint="Password"
             android:inputType="textPassword" />
 
         <EditText
@@ -86,14 +86,13 @@
 
         <Button
             android:id="@+id/SignUp"
-            android:layout_width="239dp"
+            android:layout_width="212dp"
             android:layout_height="wrap_content"
             android:background="@drawable/signupbutton"
             android:onClick="signUp_onclick" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearLayout_SignIn"
         android:layout_width="63dp"
         android:layout_height="102dp"
         android:layout_marginTop="8dp"
@@ -104,7 +103,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/include"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/LinearLayout_Details">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
             android:id="@+id/SignIn"
@@ -116,26 +115,24 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearLayout_AdminLogIn"
         android:layout_width="145dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/include"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LinearLayout_SignIn">
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/Admin_LogIn"
-            android:layout_width="135dp"
+            android:layout_width="131dp"
             android:layout_height="wrap_content"
             android:background="@drawable/asadminp2"
-            android:textStyle="bold"
             android:onClick="adminsigninconnect" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

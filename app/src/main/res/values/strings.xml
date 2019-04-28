@@ -19,6 +19,13 @@
     <string name="title_activity_sign_up_page">SignUpPage</string>
     <string name="title_activity_enter">Sign in</string>
     <string name="touch_to_enter">TOUCH TO ENTER</string>
-    <string name="password">Password</string>
     <string name="menu">MENU</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="scan">Scan</string>
+    <string name="trash_type">TRASH TYPE</string>
 </resources>
