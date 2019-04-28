@@ -42,8 +42,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="First Name"
-<<<<<<< android:HEAD
-=======
             android:inputType="textPersonName" />
 
         <EditText
@@ -52,11 +50,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Last Name"
->>>>>>> dcf19bc6864e56b18b92f1505acac0381443b88a
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/Username"
+            android:id="@+id/SignUp_Username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -64,7 +61,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/Email"
+            android:id="@+id/SignUp_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -72,7 +69,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/Password"
+            android:id="@+id/SignUp_Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -80,7 +77,7 @@
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/ConfirmPassword"
+            android:id="@+id/SignUp_ConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -91,7 +88,8 @@
             android:id="@+id/SignUp"
             android:layout_width="239dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/signupbutton" />
+            android:background="@drawable/signupbutton"
+            android:onClick="signUp_onclick" />
     </LinearLayout>
 
     <LinearLayout
@@ -135,24 +133,9 @@
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:background="@drawable/asadminp2"
+            android:textStyle="bold"
+            android:onClick="adminsigninconnect" />
 
-        <
-
-        <
-
-        <
-
-        <
-
-        <
-
-        <
-
-        < android:HEAD
-            android:textStyle="bold" />
-        =======
-        android:onClick="adminsigninconnect" />
-        >>>>>>> dcf19bc6864e56b18b92f1505acac0381443b88a
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
