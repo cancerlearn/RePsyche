@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".scanner"></activity>
+        <activity android:name=".Bins"></activity>
+        <activity android:name=".scanner" />
         <activity android:name=".AdminPage" />
         <activity android:name=".adminlogin" />
         <activity android:name=".HomePage" />

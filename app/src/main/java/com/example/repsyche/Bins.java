@@ -6,15 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class HomePage extends AppCompatActivity {
+public class Bins extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.activity_bins);
     }
 
-    public void binsconnect(View v) {
+    public void scannerconnect(View v) {
         Intent p = new Intent(this, scanner.class);
         startActivity(p);
 
