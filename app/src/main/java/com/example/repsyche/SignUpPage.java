@@ -17,8 +17,6 @@ public class SignUpPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_page);
-
-
     }
 
     public void signinconnect(View v) {
@@ -27,7 +25,12 @@ public class SignUpPage extends AppCompatActivity {
 
     }
 
+    public void adminsigninconnect(View v) {
+        Intent n = new Intent(this, LoginPage.class);
+        startActivity(n);
+
+    }
+
     public native boolean newUser(String userName, String email);
     public native boolean signUp(String user_details);
-
 }

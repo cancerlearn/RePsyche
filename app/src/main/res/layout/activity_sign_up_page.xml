@@ -22,6 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/signupback" />
 
     <LinearLayout
@@ -41,6 +42,17 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="First Name"
+<<<<<<< android:HEAD
+=======
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/LastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Last Name"
+>>>>>>> dcf19bc6864e56b18b92f1505acac0381443b88a
             android:inputType="textPersonName" />
 
         <EditText
@@ -111,18 +123,36 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/include"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout_SignIn">
 
         <Button
             android:id="@+id/Admin_LogIn"
-            android:layout_width="131dp"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:background="@drawable/asadminp2"
+
+        <
+
+        <
+
+        <
+
+        <
+
+        <
+
+        <
+
+        < android:HEAD
             android:textStyle="bold" />
+        =======
+        android:onClick="adminsigninconnect" />
+        >>>>>>> dcf19bc6864e56b18b92f1505acac0381443b88a
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
