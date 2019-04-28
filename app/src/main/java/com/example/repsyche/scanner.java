@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -39,6 +40,11 @@ public class scanner extends AppCompatActivity {
             //we have a result
             String scanContent = scanningResult.getContents();
             String scanFormat = scanningResult.getFormatName();
+
+            TextView scan_format = (TextView) findViewById(R.id.scan_format);
+            TextView scan_content = (TextView) findViewById(R.id.scan_content);
+            scan_format.setText("FORMAT: " + scanFormat);
+            scan_content.setText("CONTENT: " + scanContent);
 
 
         } else {
