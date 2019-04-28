@@ -40,57 +40,71 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="First Name"
-            android:inputType="textPersonName" />
+            android:autofillHints=""
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Last Name"
-            android:inputType="textPersonName" />
+            android:autofillHints=""
+            android:hint="@string/last_name"
+            android:inputType="textPersonName"
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/editText10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Username"
-            android:inputType="textPersonName" />
+            android:autofillHints=""
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/editText11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:autofillHints=""
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/editText12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:autofillHints=""
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/editText13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Confirm Password"
-            android:inputType="textPassword" />
+            android:autofillHints=""
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            tools:targetApi="o" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/signupbutton" />
+            android:background="@drawable/signupbutton"
+            android:onClick="homepageconnect" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="63dp"
         android:layout_height="102dp"
         android:layout_marginTop="8dp"
@@ -115,9 +129,17 @@
     <LinearLayout
         android:layout_width="145dp"
         android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="704dp">
+        app:layout_constraintBottom_toBottomOf="@+id/include"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3">
 
         <Button
             android:id="@+id/button6"
