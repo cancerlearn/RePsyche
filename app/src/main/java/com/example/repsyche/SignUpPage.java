@@ -26,4 +26,8 @@ public class SignUpPage extends AppCompatActivity {
         startActivity(u);
 
     }
+
+    public native boolean newUser(String userName, String email);
+    public native boolean signUp(String user_details);
+
 }

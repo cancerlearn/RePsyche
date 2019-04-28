@@ -25,9 +25,10 @@
         app:srcCompat="@drawable/signupback" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/LinearLayout_Details"
         android:layout_width="286dp"
         android:layout_height="345dp"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,15 +36,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/editText9"
+            android:id="@+id/FirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Full Name"
+            android:hint="First Name"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editText10"
+            android:id="@+id/Username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -51,7 +52,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editText11"
+            android:id="@+id/Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -59,15 +60,15 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/editText12"
+            android:id="@+id/Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/editText13"
+            android:id="@+id/ConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -75,13 +76,14 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
+            android:id="@+id/SignUp"
+            android:layout_width="239dp"
             android:layout_height="wrap_content"
             android:background="@drawable/signupbutton" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/LinearLayout_SignIn"
         android:layout_width="63dp"
         android:layout_height="102dp"
         android:layout_marginTop="8dp"
@@ -92,10 +94,10 @@
         app:layout_constraintBottom_toBottomOf="@+id/include"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout_Details">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/SignIn"
             android:layout_width="63dp"
             android:layout_height="21dp"
             android:background="@drawable/p2signin"
@@ -104,6 +106,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/LinearLayout_AdminLogIn"
         android:layout_width="145dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
@@ -115,10 +118,11 @@
         app:layout_constraintStart_toStartOf="@+id/imageView3">
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/Admin_LogIn"
             android:layout_width="131dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/asadminp2" />
+            android:background="@drawable/asadminp2"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
