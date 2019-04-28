@@ -32,10 +32,4 @@ public class SignUpPage extends AppCompatActivity {
         startActivity(n);
 
     }
-
-    public void homepageconnect(View v) {
-        Intent p = new Intent(this, HomePage.class);
-        startActivity(p);
-
-    }
 }
