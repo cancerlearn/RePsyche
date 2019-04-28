@@ -35,26 +35,18 @@
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/SignUp_Email"
+                android:id="@+id/TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <AutoCompleteTextView
-                    android:id="@+id/email"
+                <EditText
+                    android:id="@+id/SignIn_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
                     android:hint="@string/prompt_email"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:orientation="vertical"
-                    tools:layout_editor_absoluteX="52dp"
-                    tools:layout_editor_absoluteY="384dp"></LinearLayout>
-
+                    android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -62,7 +54,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/SignUp_Password"
+                    android:id="@+id/SignIn_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -103,7 +95,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="108dp"
         android:background="@drawable/signinbutton"
-        android:onClick="homepageconnect"
+        android:onClick="SignIn_onclick_homepageconnect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
