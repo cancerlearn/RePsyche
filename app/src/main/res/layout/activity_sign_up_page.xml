@@ -115,19 +115,16 @@
     <LinearLayout
         android:layout_width="145dp"
         android:layout_height="19dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/include"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3">
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="704dp">
 
         <Button
             android:id="@+id/button6"
             android:layout_width="131dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/asadminp2" />
+            android:background="@drawable/asadminp2"
+            android:onClick="adminsigninconnect" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
