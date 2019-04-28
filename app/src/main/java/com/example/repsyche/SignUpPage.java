@@ -43,7 +43,7 @@ public class SignUpPage extends AppCompatActivity {
     }
 
     public void adminsigninconnect(View v) {
-        Intent n = new Intent(this, LoginPage.class);
+        Intent n = new Intent(this, AdminPage.class);
         startActivity(n);
 
     }

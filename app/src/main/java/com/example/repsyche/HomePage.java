@@ -15,7 +15,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void binsconnect(View v) {
-        Intent p = new Intent(this, scanner.class);
+        Intent p = new Intent(this, Bins.class);
         startActivity(p);
 
     }
