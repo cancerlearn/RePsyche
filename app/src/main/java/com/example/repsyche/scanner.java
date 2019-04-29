@@ -39,7 +39,7 @@ public class scanner extends AppCompatActivity {
         IntentIntegrator integrator = new IntentIntegrator(this);
         integrator.setDesiredBarcodeFormats(IntentIntegrator.ONE_D_CODE_TYPES);
         integrator.setPrompt("Scan a barcode");
-        integrator.setResultDisplayDuration(0);
+        integrator.setResultDisplayDuration(1);
         integrator.setWide();  // Wide scanning rectangle, may work better for 1D barcodes
         integrator.setCameraId(0);  // Use a specific camera of the device
         integrator.initiateScan();
@@ -66,10 +66,12 @@ public class scanner extends AppCompatActivity {
                 mUserDatabaseHelper.addUserCredit(user_email, 0.2);
                 createAlertBox("Succesful Scan", "0.2 pesewas credited to account.");
             }
-            else {
+            else if (!productNotScanned(scanContent)){
                 createAlertBox("Unsuccesful Scan", "Product may have already been scanned.");
             }
-
+            else if (!mBinDatabaseHelper.decreaseBinCapacity(trash_bin)){
+                createAlertBox("Unsuccesful Scan", "Bin is full.");
+            }
 
         } else {
             Toast toast = Toast.makeText(getApplicationContext(), "No scan data received!", Toast.LENGTH_SHORT);
