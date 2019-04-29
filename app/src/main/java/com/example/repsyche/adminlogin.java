@@ -10,8 +10,8 @@ import android.widget.EditText;
 
 public class adminlogin extends AppCompatActivity {
 
-    EditText admin_email, admin_password;
-    AdminDatabaseHelper mAdminDatabaseHelper;
+    private EditText admin_email, admin_password;
+    private AdminDatabaseHelper mAdminDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -10,8 +10,8 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    BinDatabaseHelper mBinDatabaseHelper;
-    AdminDatabaseHelper mAdminDatabaseHelper;
+    private BinDatabaseHelper mBinDatabaseHelper;
+    private AdminDatabaseHelper mAdminDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

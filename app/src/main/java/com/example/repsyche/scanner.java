@@ -17,10 +17,10 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class scanner extends AppCompatActivity {
 
-    String user_email, user_credit, trash_bin;
-    UserDatabaseHelper mUserDatabaseHelper;
-    BinDatabaseHelper mBinDatabaseHelper;
-    ProductDatabaseHelper mProductDatabaseHelper;
+    private String user_email, user_credit, trash_bin;
+    private UserDatabaseHelper mUserDatabaseHelper;
+    private BinDatabaseHelper mBinDatabaseHelper;
+    private ProductDatabaseHelper mProductDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -11,10 +11,10 @@ import android.widget.EditText;
 
 public class HomePage extends AppCompatActivity {
 
-    UserDatabaseHelper mUserDatabaseHelper;
-    EditText userEmail_TextView;
-    String user_email;
-    Double user_credit;
+    private UserDatabaseHelper mUserDatabaseHelper;
+    private EditText userEmail_TextView;
+    private String user_email;
+    private Double user_credit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

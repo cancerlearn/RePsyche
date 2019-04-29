@@ -12,9 +12,9 @@ import android.widget.EditText;
 
 public class SignUpPage extends AppCompatActivity {
 
-    EditText firstname, lasttname, username, email, password, confirm_password;
+    private EditText firstname, lasttname, username, email, password, confirm_password;
 
-    UserDatabaseHelper mUserDatabaseHelper;
+    private UserDatabaseHelper mUserDatabaseHelper;
 
     static {
         System.loadLibrary("DatabaseOperations_native");

@@ -9,8 +9,7 @@ import android.widget.Button;
 
 public class Bins extends AppCompatActivity {
 
-    String user_email;
-    Button glassBin_btn, paperBin_btn, plasticBin_btn;
+    private String user_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

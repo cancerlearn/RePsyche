@@ -11,8 +11,8 @@ import android.widget.EditText;
 
 public class LoginPage extends AppCompatActivity {
 
-    UserDatabaseHelper mUserDatabaseHelper;
-    EditText email, password;
+    private UserDatabaseHelper mUserDatabaseHelper;
+    private EditText email, password;
 
     static {
         System.loadLibrary("DatabaseOperations_native");

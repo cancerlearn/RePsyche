@@ -10,9 +10,9 @@ import android.widget.EditText;
 
 public class AdminPage extends AppCompatActivity {
 
-    UserDatabaseHelper mUserDatabaseHelper;
-    EditText admin_email_ET;
-    String adminEmail;
+    private UserDatabaseHelper mUserDatabaseHelper;
+    private EditText admin_email_ET;
+    private String adminEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
