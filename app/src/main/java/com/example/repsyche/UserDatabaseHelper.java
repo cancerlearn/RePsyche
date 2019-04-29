@@ -35,7 +35,7 @@ public class UserDatabaseHelper extends SQLiteOpenHelper {
                 COL3 + " TEXT NOT NULL, "+
                 COL4 + " TEXT NOT NULL, "+
                 COL5 + " TEXT NOT NULL, "+
-                COL6 + " INTEGER NOT NULL)";
+                COL6 + " REAL NOT NULL)";
 
         db.execSQL(createTable);
 
@@ -82,5 +82,46 @@ public class UserDatabaseHelper extends SQLiteOpenHelper {
         Cursor data = db.rawQuery(query, null);
         return data;
     }
+
+    public boolean addUserCredit(String user_email, double extra_credit){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        try{
+
+            double credit = getUserCredit(user_email);
+
+            String updateQuery = "UPDATE " + TABLE_NAME + " SET credit = " +
+                    (credit+extra_credit) + " WHERE " + " email = '" + user_email + "';";
+
+            db.execSQL(updateQuery);
+
+            return true;
+
+        } catch (IllegalArgumentException e){
+
+            return false;
+
+        }
+    }
+
+    public double getUserCredit(String user_email) throws IllegalArgumentException{
+
+        Cursor allData = getData();
+
+        double current_credit;
+
+        while (allData.moveToNext()){
+
+            if (allData.getString(1).equals(user_email)){
+                current_credit = allData.getDouble(5);
+                return current_credit;
+            }
+
+        }
+
+        throw new IllegalArgumentException();
+    }
+
 
 }

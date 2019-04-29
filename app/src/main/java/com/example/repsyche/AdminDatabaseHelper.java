@@ -10,15 +10,16 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-public class ProductDatabaseHelper extends SQLiteOpenHelper {
+public class AdminDatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String TAG = "ProductDatabaseHelper";
+    private static final String TAG = "AdminDatabaseHelper";
 
-    private static final String TABLE_NAME = "product_table";
-    private static final String COL1 = "productID";
-    private static final String COL2 = "email";
+    private static final String TABLE_NAME = "admin_table";
+    private static final String COL1 = "email";
+    private static final String COL2 = "password";
 
-    public ProductDatabaseHelper(@Nullable Context context) {
+
+    public AdminDatabaseHelper(@Nullable Context context) {
         super(context, TABLE_NAME, null, 1);
     }
 
@@ -37,14 +38,14 @@ public class ProductDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean addProduct(String productID, String user_email){
+    public boolean addAdmin(String email, String password){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put(COL1, productID);
-        contentValues.put(COL2, user_email);
+        contentValues.put(COL1, email);
+        contentValues.put(COL2, password);
 
-        Log.d(TAG, "add Data: Adding" + productID+", " + user_email + "to " + TABLE_NAME);
+        Log.d(TAG, "add Data: Adding" + email+", " + password + "to " + TABLE_NAME);
 
         long result;
 
@@ -68,6 +69,5 @@ public class ProductDatabaseHelper extends SQLiteOpenHelper {
         Cursor data = db.rawQuery(query, null);
         return data;
     }
-
 
 }

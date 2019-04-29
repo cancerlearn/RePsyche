@@ -12,8 +12,6 @@ import android.widget.EditText;
 
 public class SignUpPage extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
-
     EditText firstname, lasttname, username, email, password, confirm_password;
 
     UserDatabaseHelper mUserDatabaseHelper;
@@ -43,7 +41,7 @@ public class SignUpPage extends AppCompatActivity {
     }
 
     public void adminsigninconnect(View v) {
-        Intent n = new Intent(this, AdminPage.class);
+        Intent n = new Intent(this, adminlogin.class);
         startActivity(n);
 
     }

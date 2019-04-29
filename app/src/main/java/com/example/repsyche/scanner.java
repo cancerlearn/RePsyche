@@ -1,8 +1,11 @@
 package com.example.repsyche;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,10 +17,21 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class scanner extends AppCompatActivity {
 
+    String user_email, user_credit, trash_bin;
+    UserDatabaseHelper mUserDatabaseHelper;
+    BinDatabaseHelper mBinDatabaseHelper;
+    ProductDatabaseHelper mProductDatabaseHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner);
+        user_credit = getIntent().getStringExtra("User_credit");
+        user_email = getIntent().getStringExtra("User_email");
+        trash_bin = getIntent().getStringExtra("Bin");
+        mBinDatabaseHelper = new BinDatabaseHelper(this);
+        mUserDatabaseHelper = new UserDatabaseHelper(this);
+        mProductDatabaseHelper = new ProductDatabaseHelper(this);
     }
 
 
@@ -46,11 +60,46 @@ public class scanner extends AppCompatActivity {
             scan_format.setText("FORMAT: " + scanFormat);
             scan_content.setText("CONTENT: " + scanContent);
 
+            if (mBinDatabaseHelper.decreaseBinCapacity(trash_bin) && productNotScanned(scanContent) && !scanContent.equals(null)){
+
+                mProductDatabaseHelper.addProduct(scanContent, user_email);
+                mUserDatabaseHelper.addUserCredit(user_email, 0.2);
+                createAlertBox("Succesful Scan", "0.2 pesewas credited to account.");
+            }
+            else {
+                createAlertBox("Unsuccesful Scan", "Product may have already been scanned.");
+            }
+
 
         } else {
             Toast toast = Toast.makeText(getApplicationContext(), "No scan data received!", Toast.LENGTH_SHORT);
             toast.show();
         }
+    }
+
+    public void createAlertBox(String title, String message){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle(title);
+        alert.setMessage(message);
+        alert.setNegativeButton(android.R.string.no, null);
+        alert.setIcon(android.R.drawable.ic_dialog_alert);
+        alert.show();
+    }
+
+    public boolean productNotScanned(String scanContent){
+
+        Cursor allData = mProductDatabaseHelper.getData();
+
+        while (allData.moveToNext()){
+
+            if (allData.getString(0).equals(scanContent)){
+                return false;
+            }
+
+        }
+
+        return true;
+
     }
 
 }

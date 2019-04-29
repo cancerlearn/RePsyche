@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/GlassBin_btn"
             android:layout_width="277dp"
             android:layout_height="58dp"
             android:background="@drawable/glass"
@@ -46,7 +46,7 @@
             android:orientation="vertical"></LinearLayout>
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/PaperBin_btn"
             android:layout_width="280dp"
             android:layout_height="62dp"
             android:background="@drawable/paper"
@@ -58,7 +58,7 @@
             android:orientation="vertical"></LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/PlasticBin_btn"
             android:layout_width="match_parent"
             android:layout_height="59dp"
             android:background="@drawable/plastics"

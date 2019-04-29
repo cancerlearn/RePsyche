@@ -23,7 +23,7 @@ public class LoginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
         mUserDatabaseHelper = new UserDatabaseHelper(this);
-        email = findViewById(R.id.SignIn_email);
+        email = findViewById(R.id.Admin_SignIn_email);
         password = findViewById(R.id.SignUp_password);
     }
 
@@ -35,6 +35,7 @@ public class LoginPage extends AppCompatActivity {
         if (confirmUser(email_content, password_content)){
 
             Intent p = new Intent(this, HomePage.class);
+            p.putExtra("user_email", email_content);
             startActivity(p);
 
         }

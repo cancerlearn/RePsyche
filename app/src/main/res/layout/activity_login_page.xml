@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/SignIn_email"
+                    android:id="@+id/Admin_SignIn_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
