@@ -90,7 +90,6 @@
             android:id="@+id/SignUp"
             android:layout_width="212dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10"
             android:background="@drawable/signupbutton"
             android:onClick="signUp_onclick" />
     </LinearLayout>
